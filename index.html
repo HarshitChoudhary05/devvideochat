@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://8x8.vc/vpaas-magic-cookie-cc7910e2bd5449ae8ccb92c35912be82/external_api.js' async></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+      #jaas-container {
+        width: 100%;
+        height: 100vh;
+      }
+      @media (max-width: 768px) {
+        #jaas-container {
+          height: 90vh;
+          width: 100vw;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = () => {
+        const container = document.getElementById('jaas-container');
+        const api = new JitsiMeetExternalAPI("8x8.vc", {
+          roomName: "vpaas-magic-cookie-cc7910e2bd5449ae8ccb92c35912be82/Sample",
+          parentNode: container
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="jaas-container"></div>
+  </body>
+</html>
